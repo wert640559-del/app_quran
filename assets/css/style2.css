@@ -1,0 +1,470 @@
+/* Variabel CSS untuk palet warna */
+    :root {
+      --primary: #86B0BD;    /* Biru muda */
+      --secondary: #E2A16F;  /* Oranye muda */
+      --background: #FFF0DD; /* Krem sangat muda */
+      --neutral: #D1D3D4;    /* Abu-abu muda */
+      --text-dark: #333333;  /* Teks gelap */
+      --text-light: #FFFFFF; /* Teks terang */
+    }
+
+    /* Tema Gelam */
+    body.dark {
+      --primary: #5a8a9a;
+      --secondary: #c48a5a;
+      --background: #2a2a2a;
+      --neutral: #5a5a5a;
+      --text-dark: #e0e0e0;
+      --text-light: #f0f0f0;
+    }
+
+    /* Reset dan dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 0.5rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 2px 0;
+    }
+
+    /* ==========================
+   NAVIGASI SURAH
+========================== */
+.nav-surah {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.nav-left,
+.nav-right {
+  flex: 0 0 auto;
+}
+
+.nav-center {
+  flex: 1;
+  text-align: center;
+}
+
+/* Input Cari Surah */
+.search-sort input {
+  padding: 0.4rem 0.8rem;
+  width: 80%;
+  max-width: 250px;
+  border: 1px solid var(--neutral);
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-sort input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Dropdown & Play Button */
+.qari-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.qari-controls select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--neutral);
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.qari-controls button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.qari-controls button:hover {
+  background-color: var(--secondary);
+}
+
+
+    /* Kontrol tema dan navigasi */
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .qari-select {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    
+    /* Tombol */
+    button {
+      background-color: var(--secondary);
+      color: var(--text-light);
+      border: none;
+      padding: 2px 10px;
+      border-radius: 1px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d18e5a;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* awalnya tersembunyi */
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.sidebar.active {
+  right: 0; /* muncul */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.sidebar-header button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 900;
+}
+
+.overlay.active {
+  display: block;
+}
+
+    /* Input dan select */
+    input, select {
+      padding: 0.5rem;  
+      border: 1px solid var(--neutral);
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    /* Main content */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* Section pencarian dan kontrol */
+    .search-sort, .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    #searchSurah, #searchAyat {
+      min-width: 250px;
+    }
+
+    /* Daftar surah dan ayat */
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Card */
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      display: block;
+    }
+
+    .card a:hover {
+      color: var(--secondary);
+    }
+
+    /* Ayat styling */
+    .card p:first-child {
+      font-size: 1.5rem;
+      text-align: right;
+      margin-bottom: 0.5rem;
+      line-height: 2;
+    }
+
+    .card p:last-of-type {
+      margin-bottom: 1rem;
+    }
+
+    /* Kontrol ayat */
+    .card > div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .bookmark {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--neutral);
+      transition: color 0.3s;
+    }
+
+    .bookmark:hover, .bookmarked {
+      color: var(--secondary);
+    }
+
+    .note {
+      flex: 1;
+      font-size: 0.9rem;
+    }
+
+    .play-ayat {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    /* Indikator pemutaran */
+    .playing {
+      border-left: 4px solid var(--secondary);
+      background-color: rgba(134, 176, 189, 0.1);
+    }
+
+    /* Loading dan error */
+    .loading, .error {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .error {
+      color: #d9534f;
+    }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--text-light);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animasi jadi X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Navbar default (desktop) */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ayat-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid var(--primary);
+}
+
+.btn-tafsir {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-tafsir:hover {
+  background: var(--accent);
+}
+
+.tafsir-box {
+  margin-top: 8px;
+  padding: 10px;
+  background: var(--secondary);
+  border-radius: 5px;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .list {
+        grid-template-columns: 1fr;
+      }
+      
+      header nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .theme-toggle {
+        position: static;
+        margin-bottom: 1rem;
+      }
+
+      .hamburger {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    flex-direction: column;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    min-width: 180px;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav button {
+    margin: 5px 0;
+    width: 100%;
+    text-align: left;
+    background: var(--secondary);
+  }
+
+  header nav h1 {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 8px;
+    color: var(--text-light);
+  }
+}

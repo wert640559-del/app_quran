@@ -1,0 +1,1882 @@
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\detail.html =====
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Surah</title>
+  <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+  <header>
+    <button class="hamburger" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <div class="theme-toggle">
+        <button id="themeToggle">Toggle Tema</button>
+      </div>
+      <h1 id="surahTitle">Surah</h1>
+      <button id="btn-deskripsi">ℹ️ Deskripsi Surah</button>
+      <button id="backList">Kembali ke Daftar</button>
+    </nav>
+  </header>
+  
+  <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <h2>Deskripsi Surah</h2>
+    <button id="close-sidebar">&times;</button>
+  </div>
+  <div id="sidebar-content" class="sidebar-content">
+    <!-- konten deskripsi surah dimuat via JS -->
+  </div>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay"></div>
+
+
+
+<main>
+  <div class="nav-surah">
+  <!-- Kiri -->
+  <div class="nav-left">
+    <button id="prevSurah">⬅ Sebelumnya</button>
+  </div>
+
+  <!-- Tengah -->
+  <div class="nav-center">
+    <section class="search-sort">
+      <input type="text" id="searchAyat" placeholder="Cari ayat...">
+    </section>
+    <div class="qari-controls">
+      <label for="qari">Qari:</label>
+      <select id="qari">
+        <option value="01">Abdullah Al-Juhany</option>
+        <option value="02">Abdul-Muhsin Al-Qasim</option>
+        <option value="03">Abdurrahman as-Sudais</option>
+        <option value="04">Ibrahim Al-Dossari</option>
+        <option value="05">Misyari Rasyid Al-Afasi</option>
+      </select>
+      <button id="playSurah">▶ Play Surah</button>
+    </div>
+  </div>
+
+  <!-- Kanan -->
+  <div class="nav-right">
+    <button id="nextSurah">Berikutnya ➡</button>
+  </div>
+</div>
+
+
+  <section id="ayatList" class="list"></section>
+    <div id="loading" class="loading">Loading...</div>
+    <div id="error" class="error"></div>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\index.html =====
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Qur'an Interaktif</title>
+  <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+  <header>
+    <h1>Al-Qur'an Interaktif</h1>
+    <div class="theme-toggle">
+      <button id="themeToggle">Toggle Tema</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-sort">
+      <input type="text" id="searchSurah" placeholder="Cari surah...">
+      <select id="sortSurah">
+        <option value="number">Urut Nomor</option>
+        <option value="name">Urut Nama</option>
+      </select>
+    </section>
+
+    <section id="surahList" class="list"></section>
+
+    <div id="loading" class="loading">Loading...</div>
+    <div id="error" class="error"></div>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\README.md =====
+# Al-Qur'an Web
+
+Website untuk membaca Al-Qur'an dengan terjemahan bahasa Indonesia.
+
+## Fitur
+
+- Daftar semua surah Al-Qur'an
+- Detail surah dengan ayat-ayat dan terjemahan
+- Pencarian surah
+- Sistem komentar untuk setiap surah
+- Desain responsif (mobile-friendly)
+
+## Cara Menjalankan
+
+1. Buka file \index.html\ di browser web
+2. Atau gunakan live server jika tersedia
+
+## Struktur Project
+
+\\\
+project-quran/
+│   all-codes.txt
+│   detail.html
+│   index.html
+│   README.md
+│
+├───assets
+│   ├───css
+│   │       style2.css
+│   │       styles.css
+│   │
+│   └───img
+├───project-quran
+│   │   detail.html
+│   │   index.html
+│   │
+│   ├───assets
+│   │   ├───css
+│   │   │       styles.css
+│   │   │
+│   │   └───img
+│   └───src
+│       │   main.js
+│       │
+│       └───modules
+│               api.js
+│               storage.js
+│               theme.js
+│               ui.js
+│
+└───src
+    │   main.js
+    │
+    ├───api-tafsir
+    │       tafsir-1.json
+    │       tafsir-10.json
+    │       tafsir-100.json
+    │       tafsir-101.json
+    │       tafsir-102.json
+    │       tafsir-103.json
+    │       tafsir-104.json
+    │       tafsir-105.json
+    │       tafsir-106.json
+    │       tafsir-107.json
+    │       tafsir-108.json
+    │       tafsir-109.json
+    │       tafsir-11.json
+    │       tafsir-110.json
+    │       tafsir-111.json
+    │       tafsir-112.json
+    │       tafsir-113.json
+    │       tafsir-114.json
+    │       tafsir-12.json
+    │       tafsir-13.json
+    │       tafsir-14.json
+    │       tafsir-15.json
+    │       tafsir-16.json
+    │       tafsir-17.json
+    │       tafsir-18.json
+    │       tafsir-19.json
+    │       tafsir-2.json
+    │       tafsir-20.json
+    │       tafsir-21.json
+    │       tafsir-22.json
+    │       tafsir-23.json
+    │       tafsir-24.json
+    │       tafsir-25.json
+    │       tafsir-26.json
+    │       tafsir-27.json
+    │       tafsir-28.json
+    │       tafsir-29.json
+    │       tafsir-3.json
+    │       tafsir-30.json
+    │       tafsir-31.json
+    │       tafsir-32.json
+    │       tafsir-33.json
+    │       tafsir-34.json
+    │       tafsir-35.json
+    │       tafsir-36.json
+    │       tafsir-37.json
+    │       tafsir-38.json
+    │       tafsir-39.json
+    │       tafsir-4.json
+    │       tafsir-40.json
+    │       tafsir-41.json
+    │       tafsir-42.json
+    │       tafsir-43.json
+    │       tafsir-44.json
+    │       tafsir-45.json
+    │       tafsir-46.json
+    │       tafsir-47.json
+    │       tafsir-48.json
+    │       tafsir-49.json
+    │       tafsir-5.json
+    │       tafsir-50.json
+    │       tafsir-51.json
+    │       tafsir-52.json
+    │       tafsir-53.json
+    │       tafsir-54.json
+    │       tafsir-55.json
+    │       tafsir-56.json
+    │       tafsir-57.json
+    │       tafsir-58.json
+    │       tafsir-59.json
+    │       tafsir-6.json
+    │       tafsir-60.json
+    │       tafsir-61.json
+    │       tafsir-62.json
+    │       tafsir-63.json
+    │       tafsir-64.json
+    │       tafsir-65.json
+    │       tafsir-66.json
+    │       tafsir-67.json
+    │       tafsir-68.json
+    │       tafsir-69.json
+    │       tafsir-7.json
+    │       tafsir-70.json
+    │       tafsir-71.json
+    │       tafsir-72.json
+    │       tafsir-73.json
+    │       tafsir-74.json
+    │       tafsir-75.json
+    │       tafsir-76.json
+    │       tafsir-77.json
+    │       tafsir-78.json
+    │       tafsir-79.json
+    │       tafsir-8.json
+    │       tafsir-80.json
+    │       tafsir-81.json
+    │       tafsir-82.json
+    │       tafsir-83.json
+    │       tafsir-84.json
+    │       tafsir-85.json
+    │       tafsir-86.json
+    │       tafsir-87.json
+    │       tafsir-88.json
+    │       tafsir-89.json
+    │       tafsir-9.json
+    │       tafsir-90.json
+    │       tafsir-91.json
+    │       tafsir-92.json
+    │       tafsir-93.json
+    │       tafsir-94.json
+    │       tafsir-95.json
+    │       tafsir-96.json
+    │       tafsir-97.json
+    │       tafsir-98.json
+    │       tafsir-99.json
+    │
+    ├───data
+    │       surah-1.json
+    │       surah-10.json
+    │       surah-100.json
+    │       surah-101.json
+    │       surah-102.json
+    │       surah-103.json
+    │       surah-104.json
+    │       surah-105.json
+    │       surah-106.json
+    │       surah-107.json
+    │       surah-108.json
+    │       surah-109.json
+    │       surah-11.json
+    │       surah-110.json
+    │       surah-111.json
+    │       surah-112.json
+    │       surah-113.json
+    │       surah-114.json
+    │       surah-12.json
+    │       surah-13.json
+    │       surah-14.json
+    │       surah-15.json
+    │       surah-16.json
+    │       surah-17.json
+    │       surah-18.json
+    │       surah-19.json
+    │       surah-2.json
+    │       surah-20.json
+    │       surah-21.json
+    │       surah-22.json
+    │       surah-23.json
+    │       surah-24.json
+    │       surah-25.json
+    │       surah-26.json
+    │       surah-27.json
+    │       surah-28.json
+    │       surah-29.json
+    │       surah-3.json
+    │       surah-30.json
+    │       surah-31.json
+    │       surah-32.json
+    │       surah-33.json
+    │       surah-34.json
+    │       surah-35.json
+    │       surah-36.json
+    │       surah-37.json
+    │       surah-38.json
+    │       surah-39.json
+    │       surah-4.json
+    │       surah-40.json
+    │       surah-41.json
+    │       surah-42.json
+    │       surah-43.json
+    │       surah-44.json
+    │       surah-45.json
+    │       surah-46.json
+    │       surah-47.json
+    │       surah-48.json
+    │       surah-49.json
+    │       surah-5.json
+    │       surah-50.json
+    │       surah-51.json
+    │       surah-52.json
+    │       surah-53.json
+    │       surah-54.json
+    │       surah-55.json
+    │       surah-56.json
+    │       surah-57.json
+    │       surah-58.json
+    │       surah-59.json
+    │       surah-6.json
+    │       surah-60.json
+    │       surah-61.json
+    │       surah-62.json
+    │       surah-63.json
+    │       surah-64.json
+    │       surah-65.json
+    │       surah-66.json
+    │       surah-67.json
+    │       surah-68.json
+    │       surah-69.json
+    │       surah-7.json
+    │       surah-70.json
+    │       surah-71.json
+    │       surah-72.json
+    │       surah-73.json
+    │       surah-74.json
+    │       surah-75.json
+    │       surah-76.json
+    │       surah-77.json
+    │       surah-78.json
+    │       surah-79.json
+    │       surah-8.json
+    │       surah-80.json
+    │       surah-81.json
+    │       surah-82.json
+    │       surah-83.json
+    │       surah-84.json
+    │       surah-85.json
+    │       surah-86.json
+    │       surah-87.json
+    │       surah-88.json
+    │       surah-89.json
+    │       surah-9.json
+    │       surah-90.json
+    │       surah-91.json
+    │       surah-92.json
+    │       surah-93.json
+    │       surah-94.json
+    │       surah-95.json
+    │       surah-96.json
+    │       surah-97.json
+    │       surah-98.json
+    │       surah-99.json
+    │       surat.json
+    │
+    └───modules
+            api.js
+            storage.js
+            theme.js
+            ui.js
+            utils.js       # Fungsi utilitas
+\\\
+
+## API yang Digunakan
+
+Menggunakan API dari [Quran API by SutanLab](https://api.quran.sutanlab.id)
+
+## Teknologi
+
+- HTML5
+- CSS3 (Grid, Flexbox, Media Queries)
+- JavaScript ES6+ (Modules, async/await)
+- Local Storage untuk penyimpanan komentar
+
+## Browser Support
+
+Website ini mendukung browser modern yang mendukung:
+- ES6 Modules
+- Fetch API
+- CSS Grid dan Flexbox
+- Local Storage
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\assets\css\style2.css =====
+/* Variabel CSS untuk palet warna */
+    :root {
+      --primary: #86B0BD;    /* Biru muda */
+      --secondary: #E2A16F;  /* Oranye muda */
+      --background: #FFF0DD; /* Krem sangat muda */
+      --neutral: #D1D3D4;    /* Abu-abu muda */
+      --text-dark: #333333;  /* Teks gelap */
+      --text-light: #FFFFFF; /* Teks terang */
+    }
+
+    /* Tema Gelam */
+    body.dark {
+      --primary: #5a8a9a;
+      --secondary: #c48a5a;
+      --background: #2a2a2a;
+      --neutral: #5a5a5a;
+      --text-dark: #e0e0e0;
+      --text-light: #f0f0f0;
+    }
+
+    /* Reset dan dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 0.5rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 2px 0;
+    }
+
+    /* ==========================
+   NAVIGASI SURAH
+========================== */
+.nav-surah {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.nav-left,
+.nav-right {
+  flex: 0 0 auto;
+}
+
+.nav-center {
+  flex: 1;
+  text-align: center;
+}
+
+/* Input Cari Surah */
+.search-sort input {
+  padding: 0.4rem 0.8rem;
+  width: 80%;
+  max-width: 250px;
+  border: 1px solid var(--neutral);
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-sort input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Dropdown & Play Button */
+.qari-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.qari-controls select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--neutral);
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.qari-controls button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.qari-controls button:hover {
+  background-color: var(--secondary);
+}
+
+
+    /* Kontrol tema dan navigasi */
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .qari-select {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    
+    /* Tombol */
+    button {
+      background-color: var(--secondary);
+      color: var(--text-light);
+      border: none;
+      padding: 2px 10px;
+      border-radius: 1px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d18e5a;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* awalnya tersembunyi */
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.sidebar.active {
+  right: 0; /* muncul */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.sidebar-header button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 900;
+}
+
+.overlay.active {
+  display: block;
+}
+
+    /* Input dan select */
+    input, select {
+      padding: 0.5rem;  
+      border: 1px solid var(--neutral);
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    /* Main content */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* Section pencarian dan kontrol */
+    .search-sort, .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    #searchSurah, #searchAyat {
+      min-width: 250px;
+    }
+
+    /* Daftar surah dan ayat */
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Card */
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      display: block;
+    }
+
+    .card a:hover {
+      color: var(--secondary);
+    }
+
+    /* Ayat styling */
+    .card p:first-child {
+      font-size: 1.5rem;
+      text-align: right;
+      margin-bottom: 0.5rem;
+      line-height: 2;
+    }
+
+    .card p:last-of-type {
+      margin-bottom: 1rem;
+    }
+
+    /* Kontrol ayat */
+    .card > div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .bookmark {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--neutral);
+      transition: color 0.3s;
+    }
+
+    .bookmark:hover, .bookmarked {
+      color: var(--secondary);
+    }
+
+    .note {
+      flex: 1;
+      font-size: 0.9rem;
+    }
+
+    .play-ayat {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    /* Indikator pemutaran */
+    .playing {
+      border-left: 4px solid var(--secondary);
+      background-color: rgba(134, 176, 189, 0.1);
+    }
+
+    /* Loading dan error */
+    .loading, .error {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .error {
+      color: #d9534f;
+    }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--text-light);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animasi jadi X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Navbar default (desktop) */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ayat-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid var(--primary);
+}
+
+.btn-tafsir {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-tafsir:hover {
+  background: var(--accent);
+}
+
+.tafsir-box {
+  margin-top: 8px;
+  padding: 10px;
+  background: var(--secondary);
+  border-radius: 5px;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .list {
+        grid-template-columns: 1fr;
+      }
+      
+      header nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .theme-toggle {
+        position: static;
+        margin-bottom: 1rem;
+      }
+
+      .hamburger {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    flex-direction: column;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    min-width: 180px;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav button {
+    margin: 5px 0;
+    width: 100%;
+    text-align: left;
+    background: var(--secondary);
+  }
+
+  header nav h1 {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 8px;
+    color: var(--text-light);
+  }
+}
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\assets\css\styles.css =====
+/* ---------- VARIABLES ---------- */
+:root {
+  --bg-light: #ffffff;
+  --text-light: #1a1a1a;
+  --card-light: #f5f5f5;
+  --link-light: #1976d2;
+
+  --bg-dark: #1e1e1e;
+  --text-dark: #e0e0e0;
+  --card-dark: #2a2a2a;
+  --link-dark: #64b5f6;
+
+  --btn-bg: #4caf50;
+  --btn-text: #ffffff;
+
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- GLOBAL ---------- */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-light);
+}
+
+body.dark a {
+  color: var(--link-dark);
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-light);
+}
+
+body.dark header {
+  background-color: var(--card-dark);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- SEARCH & SORT ---------- */
+.search-sort {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.search-sort input,
+.search-sort select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- LIST CARD ---------- */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--card-light);
+}
+
+body.dark .card {
+  background-color: var(--card-dark);
+}
+
+/* ---------- BOOKMARK & NOTE ---------- */
+.bookmark {
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+input.note {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- LOADING & ERROR ---------- */
+.loading,
+.error {
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: bold;
+}
+
+/* Tombol Play Surah */
+.controls {
+  padding: 0.5rem 1rem;
+  text-align: left; /* atau center jika mau */
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4CAF50; /* sama dengan tombol lain */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.controls button:hover {
+  background-color: #45A049;
+}
+
+/* Dark mode untuk tombol */
+body.dark .controls button {
+  background-color: #388E3C;
+}
+
+body.dark .controls button:hover {
+  background-color: #2E7D32;
+}
+
+.nav-surah {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.nav-surah .middle-controls {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-surah button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  header, .search-sort {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    margin-top: 0.5rem;
+  }
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\detail.html =====
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Surah</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="surahTitle">Surah</h1>
+    <div class="theme-toggle">
+      <button id="themeToggle">Toggle Tema</button>
+    </div>
+    <nav>
+      <button id="prevSurah">Sebelumnya</button>
+      <button id="nextSurah">Berikutnya</button>
+      <button id="backList">Kembali ke Daftar</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-sort">
+      <input type="text" id="searchAyat" placeholder="Cari ayat...">
+    </section>
+
+    <section id="ayatList" class="list"></section>
+    <div id="loading" class="loading">Loading...</div>
+    <div id="error" class="error"></div>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\index.html =====
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Qur'an Interaktif</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Al-Qur'an Interaktif</h1>
+    <div class="theme-toggle">
+      <button id="themeToggle">Toggle Tema</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-sort">
+      <input type="text" id="searchSurah" placeholder="Cari surah...">
+      <select id="sortSurah">
+        <option value="number">Urut Nomor</option>
+        <option value="name">Urut Nama</option>
+      </select>
+    </section>
+
+    <section id="surahList" class="list"></section>
+
+    <div id="loading" class="loading">Loading...</div>
+    <div id="error" class="error"></div>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\assets\css\styles.css =====
+:root {
+  --bg-light: #FAFAFA;
+  --card-light: #F5F5F5;
+  --text-primary-light: #1A1A1A;
+  --text-secondary-light: #555555;
+  --btn: #4CAF50;
+  --btn-hover: #45A049;
+  --highlight-light: #FFF176;
+  --link-light: #1976D2;
+
+  --bg-dark: #1E1E1E;
+  --card-dark: #2A2A2A;
+  --text-primary-dark: #E0E0E0;
+  --text-secondary-dark: #B0B0B0;
+  --highlight-dark: #FFD54F;
+  --link-dark: #64B5F6;
+
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-primary-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-primary-dark);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-light);
+}
+
+body.dark header {
+  background-color: var(--card-dark);
+}
+
+h1 { margin: 0; }
+
+.theme-toggle button, nav button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--btn);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.theme-toggle button:hover, nav button:hover {
+  background-color: var(--btn-hover);
+}
+
+.search-sort { display: flex; gap: 0.5rem; padding: 1rem; }
+.search-sort input, .search-sort select { padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; }
+
+.list { display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem; }
+
+.card {
+  background-color: var(--card-light);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+body.dark .card { background-color: var(--card-dark); }
+.card:hover { transform: scale(1.02); }
+
+.bookmark { color: var(--link-light); cursor: pointer; margin-left: 0.5rem; }
+body.dark .bookmark { color: var(--link-dark); }
+
+.highlight { background-color: var(--highlight-light); }
+body.dark .highlight { background-color: var(--highlight-dark); }
+
+.loading, .error { text-align: center; padding: 2rem; font-weight: bold; }
+
+@media (max-width: 600px) {
+  header, .search-sort { flex-direction: column; align-items: stretch; }
+  .theme-toggle button, nav button { margin: 0.5rem 0; }
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\src\main.js =====
+import { fetchSurahList, fetchSurahDetail } from './modules/api.js';
+import { renderSurahList, renderAyatList } from './modules/ui.js';
+import { applyTheme, toggleTheme } from './modules/theme.js';
+applyTheme();
+document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+const user='defaultUser';
+if (window.location.pathname.endsWith('index.html')) {
+  const surahListEl=document.getElementById('surahList');
+  const loadingEl=document.getElementById('loading');
+  const errorEl=document.getElementById('error');
+  const searchEl=document.getElementById('searchSurah');
+  const sortEl=document.getElementById('sortSurah');
+  let surahList=[];
+  async function loadSurah(){
+    try { loadingEl.style.display='block'; surahList=await fetchSurahList(); renderSurahList(surahListEl,surahList,user); }
+    catch(err){ errorEl.textContent=err.message; }
+    finally{ loadingEl.style.display='none'; }
+  }
+  loadSurah();
+  searchEl.addEventListener('input',e=>{ const val=e.target.value.toLowerCase(); const filtered=surahList.filter(s=>s.nama.toLowerCase().includes(val)||String(s.nomor).includes(val)); renderSurahList(surahListEl,filtered,user); });
+  sortEl.addEventListener('change',e=>{ const type=e.target.value; const sorted=[...surahList].sort((a,b)=>type==='name'?a.nama.localeCompare(b.nama):a.nomor-b.nomor); renderSurahList(surahListEl,sorted,user); });
+} else if (window.location.pathname.endsWith('detail.html')) {
+  const params=new URLSearchParams(window.location.search);
+  const surahId=params.get('id');
+  const ayatListEl=document.getElementById('ayatList');
+  const loadingEl=document.getElementById('loading');
+  const errorEl=document.getElementById('error');
+  const searchEl=document.getElementById('searchAyat');
+  const surahTitleEl=document.getElementById('surahTitle');
+  let ayatList=[];
+  async function loadDetail(){
+    try { loadingEl.style.display='block'; const surahDetail=await fetchSurahDetail(surahId); surahTitleEl.textContent=\\ (\)\; ayatList=surahDetail.ayat; renderAyatList(ayatListEl,ayatList,user,surahId); }
+    catch(err){ errorEl.textContent=err.message; }
+    finally{ loadingEl.style.display='none'; }
+  }
+  loadDetail();
+  searchEl.addEventListener('input',e=>{ const val=e.target.value.toLowerCase(); const filtered=ayatList.filter(a=>a.id.toLowerCase().includes(val)); renderAyatList(ayatListEl,filtered,user,surahId); });
+  document.getElementById('backList').addEventListener('click',()=>{ window.location.href='index.html'; });
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\src\modules\api.js =====
+export async function fetchSurahList() {
+  try {
+    const cache = localStorage.getItem('surahList');
+    if (cache) return JSON.parse(cache);
+
+    const res = await fetch('https://equran.id/api/v2/surat');
+    if (!res.ok) throw new Error('Gagal mengambil data surah');
+
+    const data = await res.json();
+    localStorage.setItem('surahList', JSON.stringify(data.data));
+    return data.data;
+  } catch (err) { throw err; }
+}
+
+export async function fetchSurahDetail(id) {
+  try {
+    const res = await fetch(https://equran.id/api/v2/surat/);
+    if (!res.ok) throw new Error('Gagal mengambil detail surah');
+
+    const data = await res.json();
+    return data.data;
+  } catch (err) { throw err; }
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\src\modules\storage.js =====
+export function setTheme(theme) { localStorage.setItem('theme', theme); }
+export function getTheme() { return localStorage.getItem('theme') || 'light'; }
+export function saveBookmark(user, surahId, ayat) {
+  const bookmarks = JSON.parse(localStorage.getItem(ookmark_\) || '{}');
+  if (!bookmarks[surahId]) bookmarks[surahId] = [];
+  if (!bookmarks[surahId].includes(ayat)) bookmarks[surahId].push(ayat);
+  localStorage.setItem(ookmark_\, JSON.stringify(bookmarks));
+}
+export function removeBookmark(user, surahId, ayat) {
+  const bookmarks = JSON.parse(localStorage.getItem(ookmark_\) || '{}');
+  if (bookmarks[surahId]) bookmarks[surahId] = bookmarks[surahId].filter(a => a !== ayat);
+  localStorage.setItem(ookmark_\, JSON.stringify(bookmarks));
+}
+export function getBookmarks(user) { return JSON.parse(localStorage.getItem(ookmark_\) || '{}'); }
+export function saveNote(user, surahId, ayat, note) {
+  const notes = JSON.parse(localStorage.getItem(
+otes_\) || '{}');
+  if (!notes[surahId]) notes[surahId] = {};
+  notes[surahId][ayat] = note;
+  localStorage.setItem(
+otes_\, JSON.stringify(notes));
+}
+export function getNotes(user) { return JSON.parse(localStorage.getItem(
+otes_\) || '{}'); }
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\src\modules\theme.js =====
+import { getTheme, setTheme } from './storage.js';
+export function applyTheme() {
+  const theme = getTheme();
+  if (theme === 'dark') document.body.classList.add('dark');
+  else document.body.classList.remove('dark');
+}
+export function toggleTheme() {
+  if (document.body.classList.contains('dark')) {
+    document.body.classList.remove('dark'); setTheme('light');
+  } else { document.body.classList.add('dark'); setTheme('dark'); }
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\project-quran\src\modules\ui.js =====
+import { saveBookmark, removeBookmark, getBookmarks, saveNote, getNotes } from './storage.js';
+export function renderSurahList(container, surahList, user) {
+  container.innerHTML = '';
+  surahList.forEach(surah => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = <a href='detail.html?id=\'><strong>\. \</strong> - \ ayat</a>;
+    container.appendChild(card);
+  });
+}
+export function renderAyatList(container, ayatList, user, surahId) {
+  container.innerHTML = '';
+  const bookmarks = getBookmarks(user);
+  const notes = getNotes(user);
+  ayatList.forEach(ayat => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    const isBookmarked = bookmarks[surahId]?.includes(ayat.nomor);
+    card.innerHTML = \
+      <p><strong>\</strong> \</p>
+      <p>\</p>
+      <div>
+        <span class="bookmark" data-ayat="\">\</span>
+        <input type="text" class="note" placeholder="Catatan..." value="\">
+      </div>\;
+    container.appendChild(card);
+    const bookmarkEl = card.querySelector('.bookmark');
+    bookmarkEl.addEventListener('click', () => {
+      if (bookmarks[surahId]?.includes(ayat.nomor)) { removeBookmark(user, surahId, ayat.nomor); bookmarkEl.textContent='☆'; }
+      else { saveBookmark(user, surahId, ayat.nomor); bookmarkEl.textContent='★'; }
+    });
+    const noteInput = card.querySelector('.note');
+    noteInput.addEventListener('input', e => { saveNote(user, surahId, ayat.nomor, e.target.value); });
+  });
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\src\main.js =====
+import { fetchSurahList, fetchSurahDetail } from './modules/api.js';
+import { renderSurahList, renderAyatList } from './modules/ui.js';
+import { applyTheme, toggleTheme } from './modules/theme.js';
+
+applyTheme();
+document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+
+const user = 'defaultUser';
+const qariSelect = document.getElementById('qari');
+let selectedQari = localStorage.getItem('selectedQari') || '01';
+if (qariSelect) qariSelect.value = selectedQari;
+qariSelect?.addEventListener('change', e => {
+  selectedQari = e.target.value;
+  localStorage.setItem('selectedQari', selectedQari);
+});
+
+if(window.location.pathname.endsWith('index.html')) {
+  const surahListEl = document.getElementById('surahList');
+  const loadingEl = document.getElementById('loading');
+  const errorEl = document.getElementById('error');
+  const searchEl = document.getElementById('searchSurah');
+  const sortEl = document.getElementById('sortSurah');
+  let surahList = [];
+
+  async function loadSurah() {
+    try {
+      loadingEl.style.display = 'block';
+      surahList = await fetchSurahList();
+      renderSurahList(surahListEl, surahList, user);
+    } catch(err) { errorEl.textContent = err.message; }
+    finally { loadingEl.style.display = 'none'; }
+  }
+  loadSurah();
+
+  searchEl.addEventListener('input', e => {
+    const val = e.target.value.toLowerCase();
+    const filtered = surahList.filter(s => 
+  s.nama.toLowerCase().includes(val) || 
+  s.namaLatin.toLowerCase().includes(val) || 
+  String(s.nomor).includes(val)
+);
+
+    renderSurahList(surahListEl, filtered, user);
+  });
+
+  sortEl.addEventListener('change', e => {
+    const type = e.target.value;
+    const sorted = [...surahList].sort((a,b) => type==='name' ? a.nama.localeCompare(b.nama) : a.nomor - b.nomor);
+    renderSurahList(surahListEl, sorted, user);
+  });
+} else if (window.location.pathname.endsWith('detail.html')) {
+  const params = new URLSearchParams(window.location.search);
+  const surahId = params.get('id');
+  const ayatListEl = document.getElementById('ayatList');
+  const loadingEl = document.getElementById('loading');
+  const errorEl = document.getElementById('error');
+  const searchEl = document.getElementById('searchAyat');
+  const surahTitleEl = document.getElementById('surahTitle');
+  const playSurahBtn = document.getElementById('playSurah');
+  let ayatList = [];
+  let currentSurah = null; // ⬅️ untuk simpan data surah aktif
+
+  const prevBtn = document.getElementById('prevSurah');
+  const nextBtn = document.getElementById('nextSurah');
+
+  prevBtn?.addEventListener('click', () => {
+    const prevId = Math.max(1, parseInt(surahId) - 1);
+    window.location.href = `detail.html?id=${prevId}`;
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const nextId = Math.min(114, parseInt(surahId) + 1);
+    window.location.href = `detail.html?id=${nextId}`;
+  });
+
+  async function loadDetail() {
+    try {
+      loadingEl.style.display = 'block';
+      const surahDetail = await fetchSurahDetail(surahId);
+      currentSurah = surahDetail; // ⬅️ simpan surah
+      surahTitleEl.textContent = `${surahDetail.nama} (${surahDetail.nomor})`;
+      ayatList = surahDetail.ayat;
+      renderAyatList(ayatListEl, ayatList, user, surahId, selectedQari);
+
+      // pakai fungsi playSurahFull
+      playSurahBtn?.addEventListener('click', () => {
+        playSurahFull(currentSurah);
+      });
+    } catch (err) {
+      errorEl.textContent = err.message;
+    } finally {
+      loadingEl.style.display = 'none';
+    }
+  }
+
+  loadDetail();
+
+  searchEl.addEventListener('input', e => {
+    const val = e.target.value.toLowerCase();
+    const filtered = ayatList.filter(a =>
+      a.teksIndonesia.toLowerCase().includes(val) ||
+      a.teksLatin.toLowerCase().includes(val)
+    );
+    renderAyatList(ayatListEl, filtered, user, surahId, selectedQari);
+  });
+
+  document.getElementById('backList')
+    ?.addEventListener('click', () => window.location.href = 'index.html');
+}
+
+
+
+// Ambil elemen audio global
+const audioPlayer = new Audio();
+let isPlaying = false;
+
+// Fungsi play full surah
+function playSurahFull(surah) {
+  if (!surah || !surah.audioFull) {
+    alert("Audio surah tidak tersedia.");
+    return;
+  }
+
+  const playButton = document.getElementById("playSurah");
+
+  if (isPlaying) {
+    // kalau lagi play → pause
+    audioPlayer.pause();
+    isPlaying = false;
+    if (playButton) playButton.textContent = "▶ Play Surah";
+  } else {
+    // ambil qari yang dipilih
+    const qari = selectedQari || "05"; // default ke 05 (Misyari Rasyid)
+    const audioUrl = surah.audioFull[qari];
+
+    if (!audioUrl) {
+      alert("Audio tidak tersedia untuk qari ini.");
+      return;
+    }
+
+    // set sumber audio
+    audioPlayer.src = audioUrl;
+    audioPlayer.play().catch(err => console.error("Gagal memutar audio:", err));
+    isPlaying = true;
+    if (playButton) playButton.textContent = "⏸ Pause";
+
+    // reset kalau selesai play
+    audioPlayer.onended = () => {
+      isPlaying = false;
+      if (playButton) playButton.textContent = "▶ Play Surah";
+    };
+  }
+}
+
+const btnDeskripsi = document.getElementById("btn-deskripsi");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+const closeSidebar = document.getElementById("close-sidebar");
+const sidebarContent = document.getElementById("sidebar-content");
+// Ambil surahId dari query string (?surah=1)
+const urlParams = new URLSearchParams(window.location.search);
+const surahId = urlParams.get("id");
+
+
+// Contoh ambil data dari JSON (ganti dengan fetch sesuai project kamu)
+async function loadSurahDetail(nomor) {
+  const res = await fetch(`src/data/surah-${nomor}.json`);
+  const data = await res.json();
+  return data.data;
+}
+
+// Event buka sidebar
+btnDeskripsi.addEventListener("click", async () => {
+  if (!surahId) {
+    sidebarContent.innerHTML = "Surah tidak ditemukan.";
+  } else {
+    const surah = await loadSurahDetail(surahId);
+    sidebarContent.innerHTML = surah.deskripsi || "Deskripsi tidak tersedia.";
+  }
+
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+});
+
+
+
+// Event tutup sidebar
+closeSidebar.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+// Klik overlay untuk menutup
+overlay.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const navMenu = document.getElementById("navMenu");
+
+hamburgerBtn?.addEventListener("click", () => {
+  hamburgerBtn.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+async function renderSurahDetail(surahId) {
+  try {
+    const res = await fetch(`src/data/surah-${surahId}.json`);
+    const surah = await res.json();
+
+    const container = document.getElementById("surahDetail");
+    container.innerHTML = `<h2>${surah.data.namaLatin} (${surah.data.nama})</h2>`;
+
+    // tampilkan ayat
+    surah.data.ayat.forEach(ayat => {
+      const ayatDiv = document.createElement("div");
+      ayatDiv.className = "ayat-item";
+      ayatDiv.innerHTML = `
+        <p class="teks-arab">${ayat.teksArab}</p>
+        <p class="teks-latin">${ayat.teksLatin}</p>
+        <p class="teks-arti">${ayat.teksIndonesia}</p>
+        <button class="btn-tafsir" data-ayat="${ayat.nomorAyat}">📖 Tafsir</button>
+        <div class="tafsir-box" id="tafsir-${ayat.nomorAyat}" style="display:none;"></div>
+      `;
+      container.appendChild(ayatDiv);
+    });
+
+    // pasang event tombol tafsir
+    document.querySelectorAll(".btn-tafsir").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const ayatNo = btn.getAttribute("data-ayat");
+        const tafsirBox = document.getElementById(`tafsir-${ayatNo}`);
+
+        if (tafsirBox.style.display === "none") {
+          // ambil tafsir dari file lokal
+          const tafsirRes = await fetch(`src/api-tafsir/tafsir-${surahId}.json`);
+          const tafsirData = await tafsirRes.json();
+
+          const tafsirAyat = tafsirData.data.tafsir.find(t => t.ayat == ayatNo);
+
+          if (tafsirAyat) {
+            tafsirBox.innerHTML = `<p>${tafsirAyat.teks}</p>`;
+            tafsirBox.style.display = "block";
+          } else {
+            tafsirBox.innerHTML = `<p>Tafsir tidak tersedia.</p>`;
+            tafsirBox.style.display = "block";
+          }
+        } else {
+          tafsirBox.style.display = "none";
+        }
+      });
+    });
+  } catch (err) {
+    console.error("Gagal render surah detail", err);
+  }
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\src\modules\api.js =====
+export async function fetchSurahList() {
+  try {
+    const cache = localStorage.getItem('surahList');
+    if (cache) return JSON.parse(cache);
+
+    const res = await fetch('./src/data/surat.json');
+    if (!res.ok) throw new Error('Gagal mengambil daftar surah');
+
+    const json = await res.json();
+    const data = json.data;
+    localStorage.setItem('surahList', JSON.stringify(data));
+    return data;
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function fetchSurahDetail(id) {
+  try {
+    const res = await fetch(`./src/data/surah-${id}.json`);
+    if (!res.ok) throw new Error(`Gagal mengambil detail surah ${id}`);
+
+    const json = await res.json();
+    return json.data;
+  } catch (err) {
+    throw err;
+  }
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\src\modules\storage.js =====
+export function setTheme(theme) {
+  localStorage.setItem('theme', theme);
+}
+
+export function getTheme() {
+  return localStorage.getItem('theme') || 'light';
+}
+
+export function saveBookmark(user, surahId, ayat) {
+  const bookmarks = JSON.parse(localStorage.getItem(`bookmark_${user}`) || '{}');
+  if (!bookmarks[surahId]) bookmarks[surahId] = [];
+  if (!bookmarks[surahId].includes(ayat)) bookmarks[surahId].push(ayat);
+  localStorage.setItem(`bookmark_${user}`, JSON.stringify(bookmarks));
+}
+
+export function removeBookmark(user, surahId, ayat) {
+  const bookmarks = JSON.parse(localStorage.getItem(`bookmark_${user}`) || '{}');
+  if (bookmarks[surahId]) bookmarks[surahId] = bookmarks[surahId].filter(a => a !== ayat);
+  localStorage.setItem(`bookmark_${user}`, JSON.stringify(bookmarks));
+}
+
+export function getBookmarks(user) {
+  return JSON.parse(localStorage.getItem(`bookmark_${user}`) || '{}');
+}
+
+export function saveNote(user, surahId, ayat, note) {
+  const notes = JSON.parse(localStorage.getItem(`notes_${user}`) || '{}');
+  if (!notes[surahId]) notes[surahId] = {};
+  notes[surahId][ayat] = note;
+  localStorage.setItem(`notes_${user}`, JSON.stringify(notes));
+}
+
+export function getNotes(user) {
+  return JSON.parse(localStorage.getItem(`notes_${user}`) || '{}');
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\src\modules\theme.js =====
+import { getTheme, setTheme } from './storage.js';
+
+export function applyTheme() {
+  const theme = getTheme();
+  if(theme === 'dark') document.body.classList.add('dark');
+  else document.body.classList.remove('dark');
+}
+
+export function toggleTheme() {
+  if(document.body.classList.contains('dark')){
+    document.body.classList.remove('dark');
+    setTheme('light');
+  } else {
+    document.body.classList.add('dark');
+    setTheme('dark');
+  }
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\src\modules\ui.js =====
+import { saveBookmark, removeBookmark, getBookmarks, saveNote, getNotes } from './storage.js';
+
+let currentPlayingAyat = null;
+
+export function renderSurahList(container, surahList, user) {
+  container.innerHTML = '';
+  surahList.forEach(surah => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    const namaSurah = surah.namaLatin || surah.nama;
+    card.innerHTML = `<a href='detail.html?id=${surah.nomor}'><strong>${surah.nomor}. ${namaSurah}</strong> - ${surah.jumlahAyat} ayat</a>`;
+    container.appendChild(card);
+  });
+}
+
+export function renderAyatList(container, ayatList, user, surahId, selectedQari='01') {
+  container.innerHTML = '';
+  const bookmarks = getBookmarks(user);
+  const notes = getNotes(user);
+
+  ayatList.forEach(ayat => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    const isBookmarked = bookmarks[surahId]?.includes(ayat.nomorAyat);
+
+    card.innerHTML = `
+      <p><strong>${ayat.nomorAyat}</strong> ${ayat.teksArab}</p>
+      <p>${ayat.teksIndonesia}</p>
+      <div>
+        <span class="bookmark">${isBookmarked ? '★' : '☆'}</span>
+        <input type="text" class="note" placeholder="Catatan..." value="${notes[surahId]?.[ayat.nomorAyat] || ''}">
+        <button class="play-ayat">▶️</button>
+        <a href="${ayat.audio[selectedQari]}" download>⬇️</a>
+      </div>
+    `;
+
+    container.appendChild(card);
+
+    const bookmarkEl = card.querySelector('.bookmark');
+    const noteInput = card.querySelector('.note');
+    const playBtn = card.querySelector('.play-ayat');
+
+    bookmarkEl.addEventListener('click', () => {
+      if (bookmarks[surahId]?.includes(ayat.nomorAyat)) {
+        removeBookmark(user, surahId, ayat.nomorAyat);
+        bookmarkEl.textContent = '☆';
+      } else {
+        saveBookmark(user, surahId, ayat.nomorAyat);
+        bookmarkEl.textContent = '★';
+      }
+    });
+
+    noteInput.addEventListener('input', e => {
+      saveNote(user, surahId, ayat.nomorAyat, e.target.value);
+    });
+
+    playBtn.addEventListener('click', () => {
+      if(currentPlayingAyat) {
+        currentPlayingAyat.audio.pause();
+        currentPlayingAyat.card.classList.remove('playing');
+      }
+      const audio = new Audio(ayat.audio[selectedQari]);
+      currentPlayingAyat = { audio, card };
+      card.classList.add('playing');
+      audio.play();
+      audio.onended = () => {
+        card.classList.remove('playing');
+        currentPlayingAyat = null;
+      };
+    });
+  });
+}
+
+
+
+===== D:\dokumen\programmer\Javascript\evaluasi\evaluasi_september\project-quran\src\modules\utils.js =====
+// Get surah ID from URL parameters
+export function getSurahIdFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('id');
+}
+
+// Debounce function to limit how often a function can be called
+export function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Format date to Indonesian locale
+export function formatDate(date) {
+    return new Date(date).toLocaleDateString('id-ID', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+
+

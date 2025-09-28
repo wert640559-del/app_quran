@@ -1,0 +1,88 @@
+﻿:root {
+  --bg-light: #FAFAFA;
+  --card-light: #F5F5F5;
+  --text-primary-light: #1A1A1A;
+  --text-secondary-light: #555555;
+  --btn: #4CAF50;
+  --btn-hover: #45A049;
+  --highlight-light: #FFF176;
+  --link-light: #1976D2;
+
+  --bg-dark: #1E1E1E;
+  --card-dark: #2A2A2A;
+  --text-primary-dark: #E0E0E0;
+  --text-secondary-dark: #B0B0B0;
+  --highlight-dark: #FFD54F;
+  --link-dark: #64B5F6;
+
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-primary-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-primary-dark);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-light);
+}
+
+body.dark header {
+  background-color: var(--card-dark);
+}
+
+h1 { margin: 0; }
+
+.theme-toggle button, nav button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--btn);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.theme-toggle button:hover, nav button:hover {
+  background-color: var(--btn-hover);
+}
+
+.search-sort { display: flex; gap: 0.5rem; padding: 1rem; }
+.search-sort input, .search-sort select { padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; }
+
+.list { display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem; }
+
+.card {
+  background-color: var(--card-light);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+body.dark .card { background-color: var(--card-dark); }
+.card:hover { transform: scale(1.02); }
+
+.bookmark { color: var(--link-light); cursor: pointer; margin-left: 0.5rem; }
+body.dark .bookmark { color: var(--link-dark); }
+
+.highlight { background-color: var(--highlight-light); }
+body.dark .highlight { background-color: var(--highlight-dark); }
+
+.loading, .error { text-align: center; padding: 2rem; font-weight: bold; }
+
+@media (max-width: 600px) {
+  header, .search-sort { flex-direction: column; align-items: stretch; }
+  .theme-toggle button, nav button { margin: 0.5rem 0; }
+}

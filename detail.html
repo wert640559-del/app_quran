@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Surah</title>
+  <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+  <header>
+    <button class="hamburger" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <div class="theme-toggle">
+        <button id="themeToggle">Toggle Tema</button>
+      </div>
+      <h1 id="surahTitle">Surah</h1>
+      <button id="btn-deskripsi">ℹ️ Deskripsi Surah</button>
+      <button id="backList">Kembali ke Daftar</button>
+    </nav>
+  </header>
+  
+  <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <h2>Deskripsi Surah</h2>
+    <button id="close-sidebar">&times;</button>
+  </div>
+  <div id="sidebar-content" class="sidebar-content">
+    <!-- konten deskripsi surah dimuat via JS -->
+  </div>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay"></div>
+
+
+
+<main>
+  <div class="nav-surah">
+  <!-- Kiri -->
+  <div class="nav-left">
+    <button id="prevSurah">⬅ Sebelumnya</button>
+  </div>
+
+  <!-- Tengah -->
+  <div class="nav-center">
+    <section class="search-sort">
+      <input type="text" id="searchAyat" placeholder="Cari ayat...">
+    </section>
+    <div class="qari-controls">
+      <label for="qari">Qari:</label>
+      <select id="qari">
+        <option value="01">Abdullah Al-Juhany</option>
+        <option value="02">Abdul-Muhsin Al-Qasim</option>
+        <option value="03">Abdurrahman as-Sudais</option>
+        <option value="04">Ibrahim Al-Dossari</option>
+        <option value="05">Misyari Rasyid Al-Afasi</option>
+      </select>
+      <button id="playSurah">▶ Play Surah</button>
+    </div>
+  </div>
+
+  <!-- Kanan -->
+  <div class="nav-right">
+    <button id="nextSurah">Berikutnya ➡</button>
+  </div>
+</div>
+
+
+  <section id="ayatList" class="list"></section>
+    <div id="loading" class="loading">Loading...</div>
+    <div id="error" class="error"></div>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
