@@ -172,248 +172,249 @@ project-quran/
 │               theme.js
 │               ui.js
 │
+├───public
+│   ├───data
+│   │       surah-1.json
+│   │       surah-10.json
+│   │       surah-100.json
+│   │       surah-101.json
+│   │       surah-102.json
+│   │       surah-103.json
+│   │       surah-104.json
+│   │       surah-105.json
+│   │       surah-106.json
+│   │       surah-107.json
+│   │       surah-108.json
+│   │       surah-109.json
+│   │       surah-11.json
+│   │       surah-110.json
+│   │       surah-111.json
+│   │       surah-112.json
+│   │       surah-113.json
+│   │       surah-114.json
+│   │       surah-12.json
+│   │       surah-13.json
+│   │       surah-14.json
+│   │       surah-15.json
+│   │       surah-16.json
+│   │       surah-17.json
+│   │       surah-18.json
+│   │       surah-19.json
+│   │       surah-2.json
+│   │       surah-20.json
+│   │       surah-21.json
+│   │       surah-22.json
+│   │       surah-23.json
+│   │       surah-24.json
+│   │       surah-25.json
+│   │       surah-26.json
+│   │       surah-27.json
+│   │       surah-28.json
+│   │       surah-29.json
+│   │       surah-3.json
+│   │       surah-30.json
+│   │       surah-31.json
+│   │       surah-32.json
+│   │       surah-33.json
+│   │       surah-34.json
+│   │       surah-35.json
+│   │       surah-36.json
+│   │       surah-37.json
+│   │       surah-38.json
+│   │       surah-39.json
+│   │       surah-4.json
+│   │       surah-40.json
+│   │       surah-41.json
+│   │       surah-42.json
+│   │       surah-43.json
+│   │       surah-44.json
+│   │       surah-45.json
+│   │       surah-46.json
+│   │       surah-47.json
+│   │       surah-48.json
+│   │       surah-49.json
+│   │       surah-5.json
+│   │       surah-50.json
+│   │       surah-51.json
+│   │       surah-52.json
+│   │       surah-53.json
+│   │       surah-54.json
+│   │       surah-55.json
+│   │       surah-56.json
+│   │       surah-57.json
+│   │       surah-58.json
+│   │       surah-59.json
+│   │       surah-6.json
+│   │       surah-60.json
+│   │       surah-61.json
+│   │       surah-62.json
+│   │       surah-63.json
+│   │       surah-64.json
+│   │       surah-65.json
+│   │       surah-66.json
+│   │       surah-67.json
+│   │       surah-68.json
+│   │       surah-69.json
+│   │       surah-7.json
+│   │       surah-70.json
+│   │       surah-71.json
+│   │       surah-72.json
+│   │       surah-73.json
+│   │       surah-74.json
+│   │       surah-75.json
+│   │       surah-76.json
+│   │       surah-77.json
+│   │       surah-78.json
+│   │       surah-79.json
+│   │       surah-8.json
+│   │       surah-80.json
+│   │       surah-81.json
+│   │       surah-82.json
+│   │       surah-83.json
+│   │       surah-84.json
+│   │       surah-85.json
+│   │       surah-86.json
+│   │       surah-87.json
+│   │       surah-88.json
+│   │       surah-89.json
+│   │       surah-9.json
+│   │       surah-90.json
+│   │       surah-91.json
+│   │       surah-92.json
+│   │       surah-93.json
+│   │       surah-94.json
+│   │       surah-95.json
+│   │       surah-96.json
+│   │       surah-97.json
+│   │       surah-98.json
+│   │       surah-99.json
+│   │       surat.json
+│   │
+│   └───tafsir
+│           tafsir-1.json
+│           tafsir-10.json
+│           tafsir-100.json
+│           tafsir-101.json
+│           tafsir-102.json
+│           tafsir-103.json
+│           tafsir-104.json
+│           tafsir-105.json
+│           tafsir-106.json
+│           tafsir-107.json
+│           tafsir-108.json
+│           tafsir-109.json
+│           tafsir-11.json
+│           tafsir-110.json
+│           tafsir-111.json
+│           tafsir-112.json
+│           tafsir-113.json
+│           tafsir-114.json
+│           tafsir-12.json
+│           tafsir-13.json
+│           tafsir-14.json
+│           tafsir-15.json
+│           tafsir-16.json
+│           tafsir-17.json
+│           tafsir-18.json
+│           tafsir-19.json
+│           tafsir-2.json
+│           tafsir-20.json
+│           tafsir-21.json
+│           tafsir-22.json
+│           tafsir-23.json
+│           tafsir-24.json
+│           tafsir-25.json
+│           tafsir-26.json
+│           tafsir-27.json
+│           tafsir-28.json
+│           tafsir-29.json
+│           tafsir-3.json
+│           tafsir-30.json
+│           tafsir-31.json
+│           tafsir-32.json
+│           tafsir-33.json
+│           tafsir-34.json
+│           tafsir-35.json
+│           tafsir-36.json
+│           tafsir-37.json
+│           tafsir-38.json
+│           tafsir-39.json
+│           tafsir-4.json
+│           tafsir-40.json
+│           tafsir-41.json
+│           tafsir-42.json
+│           tafsir-43.json
+│           tafsir-44.json
+│           tafsir-45.json
+│           tafsir-46.json
+│           tafsir-47.json
+│           tafsir-48.json
+│           tafsir-49.json
+│           tafsir-5.json
+│           tafsir-50.json
+│           tafsir-51.json
+│           tafsir-52.json
+│           tafsir-53.json
+│           tafsir-54.json
+│           tafsir-55.json
+│           tafsir-56.json
+│           tafsir-57.json
+│           tafsir-58.json
+│           tafsir-59.json
+│           tafsir-6.json
+│           tafsir-60.json
+│           tafsir-61.json
+│           tafsir-62.json
+│           tafsir-63.json
+│           tafsir-64.json
+│           tafsir-65.json
+│           tafsir-66.json
+│           tafsir-67.json
+│           tafsir-68.json
+│           tafsir-69.json
+│           tafsir-7.json
+│           tafsir-70.json
+│           tafsir-71.json
+│           tafsir-72.json
+│           tafsir-73.json
+│           tafsir-74.json
+│           tafsir-75.json
+│           tafsir-76.json
+│           tafsir-77.json
+│           tafsir-78.json
+│           tafsir-79.json
+│           tafsir-8.json
+│           tafsir-80.json
+│           tafsir-81.json
+│           tafsir-82.json
+│           tafsir-83.json
+│           tafsir-84.json
+│           tafsir-85.json
+│           tafsir-86.json
+│           tafsir-87.json
+│           tafsir-88.json
+│           tafsir-89.json
+│           tafsir-9.json
+│           tafsir-90.json
+│           tafsir-91.json
+│           tafsir-92.json
+│           tafsir-93.json
+│           tafsir-94.json
+│           tafsir-95.json
+│           tafsir-96.json
+│           tafsir-97.json
+│           tafsir-98.json
+│           tafsir-99.json
+│
 └───src
     │   main.js
-    │
-    ├───api-tafsir
-    │       tafsir-1.json
-    │       tafsir-10.json
-    │       tafsir-100.json
-    │       tafsir-101.json
-    │       tafsir-102.json
-    │       tafsir-103.json
-    │       tafsir-104.json
-    │       tafsir-105.json
-    │       tafsir-106.json
-    │       tafsir-107.json
-    │       tafsir-108.json
-    │       tafsir-109.json
-    │       tafsir-11.json
-    │       tafsir-110.json
-    │       tafsir-111.json
-    │       tafsir-112.json
-    │       tafsir-113.json
-    │       tafsir-114.json
-    │       tafsir-12.json
-    │       tafsir-13.json
-    │       tafsir-14.json
-    │       tafsir-15.json
-    │       tafsir-16.json
-    │       tafsir-17.json
-    │       tafsir-18.json
-    │       tafsir-19.json
-    │       tafsir-2.json
-    │       tafsir-20.json
-    │       tafsir-21.json
-    │       tafsir-22.json
-    │       tafsir-23.json
-    │       tafsir-24.json
-    │       tafsir-25.json
-    │       tafsir-26.json
-    │       tafsir-27.json
-    │       tafsir-28.json
-    │       tafsir-29.json
-    │       tafsir-3.json
-    │       tafsir-30.json
-    │       tafsir-31.json
-    │       tafsir-32.json
-    │       tafsir-33.json
-    │       tafsir-34.json
-    │       tafsir-35.json
-    │       tafsir-36.json
-    │       tafsir-37.json
-    │       tafsir-38.json
-    │       tafsir-39.json
-    │       tafsir-4.json
-    │       tafsir-40.json
-    │       tafsir-41.json
-    │       tafsir-42.json
-    │       tafsir-43.json
-    │       tafsir-44.json
-    │       tafsir-45.json
-    │       tafsir-46.json
-    │       tafsir-47.json
-    │       tafsir-48.json
-    │       tafsir-49.json
-    │       tafsir-5.json
-    │       tafsir-50.json
-    │       tafsir-51.json
-    │       tafsir-52.json
-    │       tafsir-53.json
-    │       tafsir-54.json
-    │       tafsir-55.json
-    │       tafsir-56.json
-    │       tafsir-57.json
-    │       tafsir-58.json
-    │       tafsir-59.json
-    │       tafsir-6.json
-    │       tafsir-60.json
-    │       tafsir-61.json
-    │       tafsir-62.json
-    │       tafsir-63.json
-    │       tafsir-64.json
-    │       tafsir-65.json
-    │       tafsir-66.json
-    │       tafsir-67.json
-    │       tafsir-68.json
-    │       tafsir-69.json
-    │       tafsir-7.json
-    │       tafsir-70.json
-    │       tafsir-71.json
-    │       tafsir-72.json
-    │       tafsir-73.json
-    │       tafsir-74.json
-    │       tafsir-75.json
-    │       tafsir-76.json
-    │       tafsir-77.json
-    │       tafsir-78.json
-    │       tafsir-79.json
-    │       tafsir-8.json
-    │       tafsir-80.json
-    │       tafsir-81.json
-    │       tafsir-82.json
-    │       tafsir-83.json
-    │       tafsir-84.json
-    │       tafsir-85.json
-    │       tafsir-86.json
-    │       tafsir-87.json
-    │       tafsir-88.json
-    │       tafsir-89.json
-    │       tafsir-9.json
-    │       tafsir-90.json
-    │       tafsir-91.json
-    │       tafsir-92.json
-    │       tafsir-93.json
-    │       tafsir-94.json
-    │       tafsir-95.json
-    │       tafsir-96.json
-    │       tafsir-97.json
-    │       tafsir-98.json
-    │       tafsir-99.json
-    │
-    ├───data
-    │       surah-1.json
-    │       surah-10.json
-    │       surah-100.json
-    │       surah-101.json
-    │       surah-102.json
-    │       surah-103.json
-    │       surah-104.json
-    │       surah-105.json
-    │       surah-106.json
-    │       surah-107.json
-    │       surah-108.json
-    │       surah-109.json
-    │       surah-11.json
-    │       surah-110.json
-    │       surah-111.json
-    │       surah-112.json
-    │       surah-113.json
-    │       surah-114.json
-    │       surah-12.json
-    │       surah-13.json
-    │       surah-14.json
-    │       surah-15.json
-    │       surah-16.json
-    │       surah-17.json
-    │       surah-18.json
-    │       surah-19.json
-    │       surah-2.json
-    │       surah-20.json
-    │       surah-21.json
-    │       surah-22.json
-    │       surah-23.json
-    │       surah-24.json
-    │       surah-25.json
-    │       surah-26.json
-    │       surah-27.json
-    │       surah-28.json
-    │       surah-29.json
-    │       surah-3.json
-    │       surah-30.json
-    │       surah-31.json
-    │       surah-32.json
-    │       surah-33.json
-    │       surah-34.json
-    │       surah-35.json
-    │       surah-36.json
-    │       surah-37.json
-    │       surah-38.json
-    │       surah-39.json
-    │       surah-4.json
-    │       surah-40.json
-    │       surah-41.json
-    │       surah-42.json
-    │       surah-43.json
-    │       surah-44.json
-    │       surah-45.json
-    │       surah-46.json
-    │       surah-47.json
-    │       surah-48.json
-    │       surah-49.json
-    │       surah-5.json
-    │       surah-50.json
-    │       surah-51.json
-    │       surah-52.json
-    │       surah-53.json
-    │       surah-54.json
-    │       surah-55.json
-    │       surah-56.json
-    │       surah-57.json
-    │       surah-58.json
-    │       surah-59.json
-    │       surah-6.json
-    │       surah-60.json
-    │       surah-61.json
-    │       surah-62.json
-    │       surah-63.json
-    │       surah-64.json
-    │       surah-65.json
-    │       surah-66.json
-    │       surah-67.json
-    │       surah-68.json
-    │       surah-69.json
-    │       surah-7.json
-    │       surah-70.json
-    │       surah-71.json
-    │       surah-72.json
-    │       surah-73.json
-    │       surah-74.json
-    │       surah-75.json
-    │       surah-76.json
-    │       surah-77.json
-    │       surah-78.json
-    │       surah-79.json
-    │       surah-8.json
-    │       surah-80.json
-    │       surah-81.json
-    │       surah-82.json
-    │       surah-83.json
-    │       surah-84.json
-    │       surah-85.json
-    │       surah-86.json
-    │       surah-87.json
-    │       surah-88.json
-    │       surah-89.json
-    │       surah-9.json
-    │       surah-90.json
-    │       surah-91.json
-    │       surah-92.json
-    │       surah-93.json
-    │       surah-94.json
-    │       surah-95.json
-    │       surah-96.json
-    │       surah-97.json
-    │       surah-98.json
-    │       surah-99.json
-    │       surat.json
     │
     └───modules
             api.js
             storage.js
             theme.js
             ui.js
-            utils.js       # Fungsi utilitas
+            utils.js         # Fungsi utilitas
 \\\
 
 ## API yang Digunakan

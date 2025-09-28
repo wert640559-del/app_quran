@@ -3,7 +3,7 @@
     const cache = localStorage.getItem('surahList');
     if (cache) return JSON.parse(cache);
 
-    const res = await fetch('./src/data/surat.json');
+    const res = await fetch('./public/data/surat.json');
     if (!res.ok) throw new Error('Gagal mengambil daftar surah');
 
     const json = await res.json();
@@ -17,7 +17,7 @@
 
 export async function fetchSurahDetail(id) {
   try {
-    const res = await fetch(`./src/data/surah-${id}.json`);
+    const res = await fetch(`./public/data/surah-${id}.json`);
     if (!res.ok) throw new Error(`Gagal mengambil detail surah ${id}`);
 
     const json = await res.json();
