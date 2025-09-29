@@ -170,17 +170,19 @@ async function loadSurahDetail(nomor) {
 }
 
 // Event buka sidebar
-btnDeskripsi.addEventListener("click", async () => {
-  if (!surahId) {
-    sidebarContent.innerHTML = "Surah tidak ditemukan.";
-  } else {
-    const surah = await loadSurahDetail(surahId);
-    sidebarContent.innerHTML = surah.deskripsi || "Deskripsi tidak tersedia.";
-  }
+if (btnDeskripsi) {
+  btnDeskripsi.addEventListener("click", async () => {
+    if (!surahId) {
+      sidebarContent.innerHTML = "Surah tidak ditemukan.";
+    } else {
+      const surah = await loadSurahDetail(surahId);
+      sidebarContent.innerHTML = surah.deskripsi || "Deskripsi tidak tersedia.";
+    }
 
-  sidebar.classList.add("active");
-  overlay.classList.add("active");
-});
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+  });
+}
 
 
 
