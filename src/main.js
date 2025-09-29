@@ -187,10 +187,13 @@ if (btnDeskripsi) {
 
 
 // Event tutup sidebar
-closeSidebar.addEventListener("click", () => {
-  sidebar.classList.remove("active");
-  overlay.classList.remove("active");
-});
+if (closeSidebar) {
+  closeSidebar.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+}
+
 
 // Klik overlay untuk menutup
 overlay.addEventListener("click", () => {
