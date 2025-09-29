@@ -196,10 +196,13 @@ if (closeSidebar) {
 
 
 // Klik overlay untuk menutup
-overlay.addEventListener("click", () => {
-  sidebar.classList.remove("active");
-  overlay.classList.remove("active");
-});
+if (overlay) {
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+}
+
 
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const navMenu = document.getElementById("navMenu");
